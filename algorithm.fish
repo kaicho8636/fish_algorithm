@@ -31,18 +31,6 @@ function binary_search
 	return 1
 end
 
-function swap
-	set x $argv[1]
-	set y $argv[2]
-	set list $argv[3..]
-	set tmp $list[$x]
-	set list[$x] $list[$y]
-	set list[$y] $tmp
-	for item in $list
-		echo $item
-	end
-end
-
 function insert
 	set value $argv[1]
 	set heap $argv[2..]
@@ -51,7 +39,9 @@ function insert
 	while test $i -gt 1
 		set parent (math floor $i/2)
 		if test $heap[$i] -lt $heap[$parent]
-			set heap (swap $i $parent $heap)
+			set tmp $heap[$i]
+			set heap[$i] $heap[$parent]
+			set heap[$parent] $tmp
 		else
 			break
 		end
@@ -78,7 +68,9 @@ function deletemin
 			set min $right
 		end
 		if test $heap[$i] -gt $heap[$min]
-			set heap (swap $i $min $heap)
+			set tmp $heap[$i]
+			set heap[$i] $heap[$min]
+			set heap[$min] $tmp
 		else
 			break
 		end
