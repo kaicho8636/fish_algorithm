@@ -1,12 +1,9 @@
 source algorithm.fish
 
-for i in (seq 10)
-	set --append test_list (random)
-end
-echo $test_list
+set test_list (jot -r 10)
 echo (heap_sort $test_list)
 
-for n in 100 200 400 800
+for n in 1000 2000 4000 8000
 	echo n=$n
 	set test_list (jot -r $n)
 	time heap_sort $test_list>/dev/null
