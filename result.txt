@@ -1,0 +1,72 @@
+線形探索
+n=10^1
+
+________________________________________________________
+Executed in    1.84 millis    fish           external
+   usr time  878.00 micros  443.00 micros  435.00 micros
+   sys time  893.00 micros  403.00 micros  490.00 micros
+
+n=10^2
+
+________________________________________________________
+Executed in    3.04 millis    fish           external
+   usr time    2.15 millis    1.73 millis  418.00 micros
+   sys time    0.78 millis    0.39 millis  393.00 micros
+
+n=10^3
+
+________________________________________________________
+Executed in   15.36 millis    fish           external
+   usr time   14.41 millis   13.64 millis  769.00 micros
+   sys time    0.89 millis    0.43 millis  458.00 micros
+
+n=10^4
+
+________________________________________________________
+Executed in  152.91 millis    fish           external
+   usr time  150.99 millis  147.70 millis    3.29 millis
+   sys time    1.74 millis    1.14 millis    0.60 millis
+
+n=10^5
+
+________________________________________________________
+Executed in    1.80 secs    fish         external
+   usr time    1.78 secs    1.75 secs   29.30 millis
+   sys time    0.02 secs    0.02 secs    0.70 millis
+
+二分探索
+n=10^1
+
+________________________________________________________
+Executed in    1.27 millis    fish           external
+   usr time    1.03 millis    1.03 millis    0.00 micros
+   sys time    0.38 millis    0.38 millis    0.00 micros
+
+n=10^2
+
+________________________________________________________
+Executed in    2.18 millis    fish           external
+   usr time    1.74 millis    1.74 millis    0.00 micros
+   sys time    0.62 millis    0.62 millis    0.00 micros
+
+n=10^3
+
+________________________________________________________
+Executed in    3.64 millis    fish           external
+   usr time    3.00 millis    3.00 millis    0.00 micros
+   sys time    0.90 millis    0.90 millis    0.00 micros
+
+n=10^4
+
+________________________________________________________
+Executed in   11.32 millis    fish           external
+   usr time    8.36 millis    8.36 millis    0.00 micros
+   sys time    3.37 millis    3.37 millis    0.00 micros
+
+n=10^5
+
+________________________________________________________
+Executed in  202.60 millis    fish           external
+   usr time  185.78 millis  185.78 millis    0.00 micros
+   sys time   17.33 millis   17.33 millis    0.00 micros
+

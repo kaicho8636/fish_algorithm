@@ -17,7 +17,7 @@ function binary_search
 	set min 1
 	set max (count $list)
     while test $min -le $max
-		set mid (math floor \($min+$max\)/2)
+		set mid (math floor\(\($min+$max\)/2\))
 		if test $list[$mid] -gt $value
 			set max (math $mid-1)
 		else if test $list[$mid] -lt $value
