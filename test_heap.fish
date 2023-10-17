@@ -1,11 +1,15 @@
 source algorithm.fish
 
-set n 10
-
-for i in (seq $n)
-	set testheap (insert (random) $testheap)
+for i in (seq 10)
+	set --append test_list (random)
 end
-while set --query testheap[1]
-	echo $testheap[1]
-	set testheap (deletemin $testheap)
+echo $test_list
+echo (heap_sort $test_list)
+
+for n in 1000 2000 4000 8000
+	for i in (seq $n)
+		set --append test_list (random)
+	end
+	echo n=$n
+	time heap_sort $test_list>/dev/null
 end

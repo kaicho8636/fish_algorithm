@@ -90,3 +90,14 @@ function deletemin
 		echo $item
 	end
 end
+
+function heap_sort
+	for item in $argv
+		set heap (insert $item $heap)
+	end
+	while set --query heap[1]
+		echo $heap[1]
+		set heap (deletemin $heap)
+	end
+end
+
