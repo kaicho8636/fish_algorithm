@@ -1,34 +1,34 @@
 function linear_search
-	set value $argv[1]
-	set list $argv[2..]
-	for i in (seq (count $list))
-		if test $value = $list[$i]
-			echo $i
-			return
-		end
-	end
-	echo 0
-	return 1
+    set value $argv[1]
+    set list $argv[2..]
+    for i in (seq (count $list))
+        if test $value = $list[$i]
+            echo $i
+            return
+        end
+    end
+    echo 0
+    return 1
 end
 
 function binary_search
     set value $argv[1]
     set list $argv[2..]
-	set min 1
-	set max (count $list)
+    set min 1
+    set max (count $list)
     while test $min -le $max
-		set mid (math floor\(\($min+$max\)/2\))
-		if test $list[$mid] -gt $value
-			set max (math $mid-1)
-		else if test $list[$mid] -lt $value
-			set min (math $mid+1)
-		else
-			echo $mid
-			return
-		end
-	end
-	echo 0
-	return 1
+        set mid (math floor\(\($min+$max\)/2\))
+        if test $list[$mid] -gt $value
+            set max (math $mid-1)
+        else if test $list[$mid] -lt $value
+            set min (math $mid+1)
+        else
+            echo $mid
+            return
+        end
+    end
+    echo 0
+    return 1
 end
 
 function heap_sort
