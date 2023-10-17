@@ -1,5 +1,3 @@
-# `source algorithm.fish` to load functions
-
 function linear_search
 	set value $argv[1]
 	set list $argv[2..]
