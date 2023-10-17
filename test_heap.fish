@@ -6,10 +6,8 @@ end
 echo $test_list
 echo (heap_sort $test_list)
 
-for n in 1000 2000 4000 8000
-	for i in (seq $n)
-		set --append test_list (random)
-	end
+for n in 100 200 400 800
 	echo n=$n
+	set test_list (jot -r $n)
 	time heap_sort $test_list>/dev/null
 end
